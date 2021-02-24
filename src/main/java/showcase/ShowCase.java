@@ -1,6 +1,6 @@
 package showcase;
 
-import books.IBooks;
+import books.IBook;
 
 import java.util.List;
 
@@ -8,8 +8,8 @@ import java.util.List;
 public class ShowCase implements IShowCase {
 
     @Override
-    public void showBooks(List<IBooks> books) {
-        for (IBooks el: books) {
+    public void showBooks(List<IBook> books) {
+        for (IBook el : books) {
             System.out.println(el);
         }
     }

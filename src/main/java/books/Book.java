@@ -1,15 +1,15 @@
 package books;
 
-public class Books implements IBooks{
-    private final String Author;
-    private String Year;
-    private String Name;
+public class Book implements IBook {
+    private final String author;
+    private final String year;
+    private final String name;
     private int quantity;
 
-    public Books(String author, String year, String name) {
-        Author = author;
-        Year = year;
-        Name = name;
+    public Book(String author, String year, String name) {
+        this.author = author;
+        this.year = year;
+        this.name = name;
     }
 
     public int getQuantity() {
@@ -21,15 +21,15 @@ public class Books implements IBooks{
     }
 
     public String getAuthor() {
-        return Author;
+        return author;
     }
 
     public String getYear() {
-        return Year;
+        return year;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     @Override
@@ -41,7 +41,6 @@ public class Books implements IBooks{
     public void deliveryFromStorage(String fromStorage) {
         System.out.println("Need delivery from " + fromStorage);
     }
-
 
     @Override
     public String toString() {

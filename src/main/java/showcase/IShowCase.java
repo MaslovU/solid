@@ -1,9 +1,9 @@
 package showcase;
 
-import books.IBooks;
+import books.IBook;
 
 import java.util.List;
 
 public interface IShowCase {
-    void showBooks(List<IBooks> books);
+    void showBooks(List<IBook> books);
 }

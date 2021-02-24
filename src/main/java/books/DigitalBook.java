@@ -1,14 +1,14 @@
 package books;
 
 public class DigitalBook implements IDigitalBook {
-    private String Author;
-    private String Year;
-    private String Name;
+    private String author;
+    private String year;
+    private String name;
 
     public DigitalBook(String author, String year, String name) {
-        Author = author;
-        Year = year;
-        Name = name;
+        this.author = author;
+        this.year = year;
+        this.name = name;
     }
 
     @Override

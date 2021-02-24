@@ -1,4 +1,7 @@
-import books.*;
+import books.DigitalBook;
+import books.FictionalBook;
+import books.IBook;
+import books.ScienceBook;
 import showcase.ShowCase;
 
 import java.util.ArrayList;
@@ -15,17 +18,17 @@ public class Main {
         scienceBook.deliveryFromStorage("St. Petersburg");
         DigitalBook digitalBook = new DigitalBook("Comp", "2021", "Java");
 
-        List<IBooks> books = new ArrayList<>();
+        List<IBook> books = new ArrayList<>();
+
         books.add(fictionalBook);
         books.add(scienceBook);
 
+        for (IBook iBook : books) {
+            iBook.moveTo();
+        }
+
         showBooks.showBooks(books);
         digitalBook.loadBook();
-
-        //принцип подстановки Лисков: в коде мы можем использовать любого из потомков
-        for (IBooks book: books) {
-            book.moveTo();
-        }
 
     }
 }

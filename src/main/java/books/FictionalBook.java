@@ -1,6 +1,6 @@
 package books;
 
-public class FictionalBook extends Books{
+public class FictionalBook extends Book {
 
     public FictionalBook(String author, String year, String name) {
         super(author, year, name);
